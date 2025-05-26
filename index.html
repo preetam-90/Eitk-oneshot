@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian History & Culture Notes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c; /* Dark theme background */
+            color: #e2e8f0; /* Light text color */
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #63b3ed; /* Blue for headings */
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #9f7aea; /* Purple for main title */
+        }
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid #4a5568; /* Darker border for unit headings */
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+            color: #f6ad55; /* Orange for sub-headings */
+            margin-top: 1.5rem;
+        }
+        h4 {
+            font-size: 1.25rem;
+            color: #48bb78; /* Green for sub-sub-headings */
+            margin-top: 1rem;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        ol {
+            list-style-type: decimal;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        .highlight-primary {
+            background-color: #4a5568; /* Dark gray for general highlights */
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.25rem;
+        }
+        .highlight-secondary {
+            background-color: #63b3ed; /* Blue for important points */
+            color: #1a202c;
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.25rem;
+            font-weight: 600;
+        }
+        .highlight-tertiary {
+            background-color: #f6ad55; /* Orange for key terms/definitions */
+            color: #1a202c;
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.25rem;
+            font-weight: 600;
+        }
+        .note-card {
+            background-color: #2d3748; /* Slightly lighter dark for cards */
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .note-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+        }
+        .nav-sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #2d3748;
+            padding: 2rem 1rem;
+            overflow-y: auto;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+            border-top-right-radius: 0.75rem;
+            border-bottom-right-radius: 0.75rem;
+        }
+        .nav-sidebar a {
+            display: block;
+            color: #e2e8f0;
+            padding: 0.5rem 0.75rem;
+            margin-bottom: 0.5rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        }
+        .nav-sidebar a:hover {
+            background-color: #4a5568;
+            color: #a0aec0;
+        }
+        .nav-sidebar .sub-link {
+            padding-left: 1.5rem;
+            font-size: 0.9rem;
+            color: #cbd5e0;
+        }
+        .main-content {
+            margin-left: 250px; /* Adjust based on sidebar width */
+            padding: 2rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .nav-sidebar {
+                width: 200px;
+            }
+            .main-content {
+                margin-left: 200px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-sidebar {
+                position: static;
+                width: 100%;
+                height: auto;
+                box-shadow: none;
+                border-radius: 0;
+                padding: 1rem;
+            }
+            .main-content {
+                margin-left: 0;
+                padding: 1rem;
+            }
+            .container {
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.75rem;
+            }
+            h3 {
+                font-size: 1.3rem;
+            }
+            h4 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-sidebar">
+        <h3 class="text-xl font-bold mb-4 text-center">Table of Contents</h3>
+        <nav>
+            <a href="#unit1">Unit 1: Society State and Polity in India</a>
+            <a href="#unit1-origin">◦ Origin of the State & Theories</a>
+            <a href="#unit1-stages">◦ Stages of State Formation</a>
+            <a href="#unit1-kingship">◦ Kingship & Council of Ministers</a>
+            <a href="#unit1-political-welfare">◦ Political Ideas & Welfare Society</a>
+            <a href="#unit1-saptanga">◦ The Seven Limbs of the State (Kautilya's Saptanga)</a>
+            <a href="#unit1-society-purushartha">◦ Society in Ancient India & Purushartha</a>
+            <a href="#unit1-varnashrama">◦ Varnashrama & Ashrama (Stages of Life)</a>
+            <a href="#unit1-marriage">◦ Marriage in Ancient India</a>
+            <a href="#unit1-gender-class">◦ Gender Category & Four Class Classification</a>
+            <a href="#unit1-slavery">◦ Slavery in Ancient India</a>
+
+            <a href="#unit2">Unit 2: Indian Literature, Culture, Tradition, and Practices</a>
+            <a href="#unit2-languages">◦ Indian Languages</a>
+            <a href="#unit2-script-evolution">◦ Evolution of Script and Languages</a>
+            <a href="#unit2-vedic-literature">◦ Vedic Literature</a>
+            <a href="#unit2-upanishads">◦ Upanishads</a>
+            <a href="#unit2-ramayana-mahabharata">◦ Ramayana and Mahabharata</a>
+            <a href="#unit2-buddhist-jain">◦ Buddhist and Jain Literature</a>
+            <a href="#unit2-arthashastra">◦ Kautilya's Arthashastra</a>
+            <a href="#unit2-sanskrit-authors">◦ Famous Sanskrit Authors and Their Works</a>
+            <a href="#unit2-dravidian-literature">◦ Telugu, Kannada, and Malayalam Literature</a>
+            <a href="#unit2-sangam">◦ Sangam Literature</a>
+            <a href="#unit2-northern-languages">◦ Northern Indian Languages and Literature</a>
+            <a href="#unit2-persian-urdu">◦ Persian and Urdu Languages</a>
+            <a href="#unit2-hindi-literature">◦ Hindi Literature</a>
+
+            <a href="#unit3">Unit 3: Indian Religion, Culture, Tradition, and Practices</a>
+            <a href="#unit3-religion-general">◦ Indian Religion (General)</a>
+            <a href="#unit3-pre-vedic">◦ Pre-Vedic Religion</a>
+            <a href="#unit3-vedic-religion">◦ Vedic Religion</a>
+            <a href="#unit3-buddhism">◦ Buddhism</a>
+            <a href="#unit3-jainism">◦ Jainism</a>
+            <a href="#unit3-six-systems">◦ Six Systems of Ancient Indian Philosophy</a>
+            <a href="#unit3-adi-shankaracharya">◦ Adi Shankaracharya</a>
+            <a href="#unit3-bhakti">◦ Bhakti Movement</a>
+            <a href="#unit3-sufi">◦ Sufi Movement</a>
+            <a href="#unit3-famous-personalities">◦ Famous Personalities</a>
+            <a href="#unit3-modern-practices">◦ Modern Religious Practices</a>
+
+            <a href="#unit4">Unit 4: Science, Management & Indian Knowledge System</a>
+            <a href="#unit4-astronomy">◦ Astronomy in India</a>
+            <a href="#unit4-chemistry">◦ Chemistry in Ancient India</a>
+            <a href="#unit4-mathematics">◦ Mathematics in Ancient India</a>
+            <a href="#unit4-physics">◦ Physics in Ancient India</a>
+            <a href="#unit4-agriculture">◦ Agriculture in Ancient India</a>
+            <a href="#unit4-medicine">◦ Medicine in Ancient India</a>
+            <a href="#unit4-metallurgy">◦ Metallurgy in Ancient India</a>
+            <a href="#unit4-geography">◦ Geography</a>
+            <a href="#unit4-biology">◦ Biology</a>
+            <a href="#unit4-harappan-technology">◦ Harappan Technology</a>
+            <a href="#unit4-water-management">◦ Water Management in Ancient India</a>
+            <a href="#unit4-textile-technology">◦ Textile Technology in India</a>
+            <a href="#unit4-writing-technology">◦ Writing Technology in India</a>
+            <a href="#unit4-pyrotechnics">◦ Pyrotechnics in India</a>
+            <a href="#unit4-trade">◦ Trade in Ancient India</a>
+            <a href="#unit4-dominance">◦ India's Dominance up to Pre-colonial Times</a>
+
+            <a href="#unit5">Unit 5: Cultural Heritage & Performing Arts</a>
+            <a href="#unit5-architecture-varieties">◦ Varieties of Indian Architecture</a>
+            <a href="#unit5-cave-architecture">◦ Major Cave Architecture in India</a>
+            <a href="#unit5-stupa-architecture">◦ Stupa Architecture</a>
+            <a href="#unit5-pillar-architecture">◦ Pillar Architecture</a>
+            <a href="#unit5-temple-architecture">◦ Temple Architecture</a>
+            <a href="#unit5-indo-islamic-architecture">◦ Indo-Islamic Architecture</a>
+            <a href="#unit5-architecture-comparison">◦ Comparison: Indo-Islamic Vs Indian Architecture</a>
+            <a href="#unit5-sculptures-seals">◦ Sculptures & Seals</a>
+            <a href="#unit5-coinage-pottery">◦ Coinage & Pottery in Ancient India</a>
+            <a href="#unit5-puppet">◦ Puppet and Puppetry</a>
+            <a href="#unit5-classical-dance">◦ Classical Dance Forms</a>
+            <a href="#unit5-fairs-festivals">◦ Fairs & Festivals of India</a>
+            <a href="#unit5-cinema-evolution">◦ Evolution of Indian Cinema</a>
+            <a href="#unit5-cinematography-act">◦ The Cinematography Act & CBFC</a>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+            <h1>Indian History & Culture Notes</h1>
+
+            <div class="note-card">
+                <h2 id="unit1">Unit 1: Society State and Polity in India</h2>
+                <p>This unit covers topics related to the formation and structure of the state, society, and social institutions in ancient India.</p>
+
+                <h3 id="unit1-origin">Origin of the State & Theories</h3>
+                <ul>
+                    <li>The state is an <span class="highlight-tertiary">association of people governing a defined territory</span>.</li>
+                    <li>Key elements: <span class="highlight-secondary">population, territory, authority, and sovereignty</span>.</li>
+                    <li>Ancient thinkers like Kautilya discussed the origin of the state.</li>
+                    <li><span class="highlight-tertiary">Four main theories:</span>
+                        <ul>
+                            <li><span class="highlight-primary">Evolutionary Theory:</span> State evolved from family/clan structures, starting from anarchy, progressing through agriculture to settled life, with assemblies (Sabha and Samiti) playing a role. Mentioned in the Atharva Veda.</li>
+                            <li><span class="highlight-primary">Force Theory:</span> State formed by the stronger dominating the weaker, seen in early Aryan clan conflicts. A strong warrior led the clan and later became king.</li>
+                            <li><span class="highlight-primary">Mystical/Divine Theory:</span> Society and the state were created by God, with the king as his representative, ruling by divine will.</li>
+                            <li><span class="highlight-primary">Contract Theory:</span> State formed through a contract between the king and his subjects or representatives. Referenced in Brahmanical texts, Kautilya's Arthashastra, and Buddhist sources.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3 id="unit1-stages">Stages of State Formation</h3>
+                <ul>
+                    <li><span class="highlight-tertiary">Six main stages</span> of ancient Indian polity:
+                        <ol>
+                            <li><span class="highlight-primary">Tribal military democracy:</span> Early stage based on hunting with tribal assemblies, not stable.</li>
+                            <li><span class="highlight-primary">Break-up of tribal polity:</span> Conflicts arose, chiefs were aided by Brahmins, leading to the beginning of taxes and classes.</li>
+                            <li><span class="highlight-primary">Full-fledged state formation:</span> Emergence of large territorial monarchies with standing armies and organized revenue collection.</li>
+                            <li><span class="highlight-primary">Maurya phase:</span> Bureaucratic centralisation based on economic expansion and guided by Kautilya's Arthashastra.</li>
+                            <li><span class="highlight-primary">Decentralised Administration:</span> Rise of towns, feudatories, and military elements.</li>
+                            <li><span class="highlight-primary">Gupta Period (Proto-Feudal Polity):</span> Land grants became important in the political structure formed by Gupta feudatories.</li>
+                        </ol>
+                    </li>
+                </ul>
+
+                <h3 id="unit1-kingship">Kingship & Council of Ministers</h3>
+                <ul>
+                    <li>The King was the <span class="highlight-secondary">most important figure</span> in the polity. Kautilya's Saptanga theory describes the King (Swami) as the head of the state.</li>
+                    <li>King's duties included protecting life, property, and customs, punishing external aggression, ensuring fair inheritance, and protecting the poor.</li>
+                    <li>The Council of Ministers (Amatya) was a vital organ, and the King needed its consent. Ministers were appointed based on <span class="highlight-tertiary">wisdom, purity, bravery, and loyalty</span>. The council size varied from 7 to 37 ministers.</li>
+                </ul>
+
+                <h3 id="unit1-political-welfare">Political Ideas & Welfare Society</h3>
+                <ul>
+                    <li>Early political science was known as <span class="highlight-tertiary">Rajadharma</span>, later called <span class="highlight-tertiary">Rajniti-sutra or Nitishastra</span>.</li>
+                    <li>Politics was discussed by Brahmins, Jains, and Buddhists.</li>
+                    <li>A <span class="highlight-secondary">welfare society</span> aims for the happiness and prosperity of individuals in a community and guarantees collective social care. Kautilya's concept of the state in his Saptanga theory was holistic.</li>
+                </ul>
+
+                <h3 id="unit1-saptanga">The Seven Limbs of the State (Kautilya's Saptanga)</h3>
+                <ul>
+                    <li><span class="highlight-tertiary">Essential components</span> of the state, engaging Artha and Dharma:
+                        <ol>
+                            <li><span class="highlight-primary">Swami (The Ruler):</span> Brave, learned monarch, native of the soil, making appointments and supervising.</li>
+                            <li><span class="highlight-primary">Amatya (The Minister):</span> Council advising the King, collecting taxes, developing areas.</li>
+                            <li><span class="highlight-primary">Janapada (The Population):</span> Fertile territory and people loyal, hardworking, and tax-paying.</li>
+                            <li><span class="highlight-primary">Durga (The Fortified Capital):</span> Sufficient forts for security and storage.</li>
+                            <li><span class="highlight-primary">Kosha (The Treasury):</span> Essential finance from taxes, vital for state functions and war.</li>
+                            <li><span class="highlight-primary">Danda (The Army):</span> Disciplined military for security, well-trained and equipped.</li>
+                            <li><span class="highlight-primary">Mitra (Ally and Friend):</span> Friendly relations, old and new, providing help and adding to state power.</li>
+                        </ol>
+                    </li>
+                </ul>
+
+                <h3 id="unit1-society-purushartha">Society in Ancient India & Purushartha</h3>
+                <ul>
+                    <li>Ancient Indian society had several features and was arranged in <span class="highlight-tertiary">four Varnas</span>.</li>
+                    <li>The purpose of life was to attain <span class="highlight-tertiary">four goals</span> called <span class="highlight-secondary">Purusharthas</span>.</li>
+                    <li><span class="highlight-tertiary">Purusharthas:</span>
+                        <ul>
+                            <li><span class="highlight-primary">Dharma:</span> Supreme principle, code of conduct, essential foundation of truth, right, virtue.</li>
+                            <li><span class="highlight-primary">Artha:</span> Worldly prosperity, wealth, material means, basis of human requirements and social well-being.</li>
+                            <li><span class="highlight-primary">Kama:</span> Worldly and sensual pleasures, sense desires, urges (can also include emotional and aesthetic life).</li>
+                            <li><span class="highlight-primary">Moksha:</span> Ultimate liberation or salvation from the cycle of birth and death.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3 id="unit1-varnashrama">Varnashrama & Ashrama (Stages of Life)</h3>
+                <ul>
+                    <li><span class="highlight-tertiary">Varna system</span> is the social hierarchy:
+                        <ul>
+                            <li><span class="highlight-primary">Brahmins:</span> Top, associated with learning, teaching, priesthood.</li>
+                            <li><span class="highlight-primary">Kshatriyas:</span> Second, warrior class, duty of protection.</li>
+                            <li><span class="highlight-primary">Vaishyas:</span> Third, trading and commercial class, expert in various goods.</li>
+                            <li><span class="highlight-primary">Shudras:</span> Bottom, served the other three Varnas, deprived of rights.</li>
+                        </ul>
+                    </li>
+                    <li><span class="highlight-tertiary">Ashrama</span> are four age-based life stages in Hinduism:
+                        <ul>
+                            <li><span class="highlight-primary">Brahmacharya:</span> Student stage (approx. 0-25 years), acquiring knowledge and discipline, celibate life.</li>
+                            <li><span class="highlight-primary">Grihastha:</span> Householder stage (approx. 25-50 years), starting at marriage, taking household responsibilities, pursuing wealth and pleasure within Dharma.</li>
+                            <li><span class="highlight-primary">Vanaprastha:</span> Retirement stage (approx. 50-75 years), dedicating self to spiritual life, moving to forest.</li>
+                            <li><span class="highlight-primary">Sanyasashrama:</span> Renunciation stage (approx. 75+ years), breaking earthly ties, becoming homeless, aiming for liberation.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3 id="unit1-marriage">Marriage in Ancient India</h3>
+                <ul>
+                    <li><span class="highlight-tertiary">Vivaha</span> was an important Sanskara.</li>
+                    <li>Marriage had <span class="highlight-secondary">three main purposes</span>.</li>
+                    <li><span class="highlight-tertiary">Eight forms of marriage</span> are mentioned: Brahma, Daiva, Arsa, Prajapatya, Gandharva, Asura, Rakshasa (by capture), and Paishacha (abduction while asleep/intoxicated).</li>
+                </ul>
+
+                <h3 id="unit1-gender-class">Gender Category & Four Class Classification</h3>
+                <ul>
+                    <li><span class="highlight-tertiary">Gender:</span> Women were recognized as <span class="highlight-primary">vivas and Lakshmi</span>. A woman was known as <span class="highlight-primary">Ardhangini</span>, and "Shakti" meant power/strength. Man was seen as the protector. Indian tradition generally respected womanhood, and women often held equal positions. However, the status of women declined considerably in the medieval period with customs like purdah, Sati, child marriage, and restrictions on widows.</li>
+                    <li><span class="highlight-tertiary">Four-Class Classification (by Abu'l Fazl):</span> People were classified into four groups:
+                        <ol>
+                            <li><span class="highlight-primary">Warriors:</span> Associated with the political body and fire.</li>
+                            <li><span class="highlight-primary">Artisans & Merchants:</span> Hold the place of air.</li>
+                            <li><span class="highlight-primary">The Learned:</span> Philosophers, physicians, scholars, astronomers, resembling water.</li>
+                            <li><span class="highlight-primary">Husbandmen & Labourers (Farmers/Workers):</span> Compared to earth, bring staple of life through work. The King was obligated to place each in their proper position.</li>
+                        </ol>
+                    </li>
+                </ul>
+
+                <h3 id="unit1-slavery">Slavery in Ancient India</h3>
+                <ul>
+                    <li><span class="highlight-secondary">Slavery existed</span> in ancient India.</li>
+                    <li>Slaves were referred to as <span class="highlight-tertiary">'Das'</span>. The word 'Das' came from the Vedic Age and means to finish or terminate, associated with their work.</li>
+                    <li>Slaves worked in homes or fields. They could be prisoners, inherited, or sold.</li>
+                    <li>Slaves were considered a form of <span class="highlight-primary">objects</span> and helpers for agriculture.</li>
+                    <li>Their position was <span class="highlight-primary">lower than even the Shudras</span>.</li>
+                    <li>Sometimes, slaves could gain freedom.</li>
+                </ul>
+            </div>
+
+            <div class="note-card">
+                <h2 id="unit2">Unit 2: Indian Literature, Culture, Tradition, and Practices</h2>
+                <p>This unit covers Indian Literature, the evolution of writing, and various languages. Language is considered key to expressing thoughts and understanding culture.</p>
+
+                <h3 id="unit2-languages">Indian Languages</h3>
+                <ul>
+                    <li>India has <span class="highlight-tertiary">four main language families</span>.</li>
+                    <li><span class="highlight-primary">Aryan:</span> The most influential family, evolved from Vedic Sanskrit into modern Indo-Aryan languages.</li>
+                    <li><span class="highlight-primary">Dravidian:</span> Older than Aryan languages, includes Tamil, Telugu, Kannada, and Malayalam primarily in South India.</li>
+                    <li>Other families mentioned are <span class="highlight-primary">Sino-Tibetan and Austric</span>.</li>
+                </ul>
+
+                <h3 id="unit2-script-evolution">Evolution of Script and Languages</h3>
+                <ul>
+                    <li><span class="highlight-tertiary">Script</span> refers to characters used for writing, while <span class="highlight-tertiary">language</span> is spoken.</li>
+                    <li>Languages evolved during various phases of migration in India.</li>
+                    <li>It's believed there are 40 scripts and 7,117 languages in the world.</li>
+                    <li>The same script can be used for multiple languages, and the same language can be written in multiple scripts.</li>
+                </ul>
+
+                <h3 id="unit2-vedic-literature">Vedic Literature</h3>
+                <ul>
+                    <li>Vedas originate from <span class="highlight-tertiary">"Vidhi" (knowledge)</span> and are also called <span class="highlight-tertiary">Shruti (to hear)</span>.</li>
+                    <li>They were written in Sanskrit and passed down through verbal communication.</li>
+                    <li><span class="highlight-tertiary">There are four Vedas:</span>
+                        <ul>
+                            <li><span class="highlight-primary">Rig-Veda:</span> Oldest religious text (approx. 1700 BC), contains 1028 hymns in 10 Mandalas.</li>
+                            <li><span class="highlight-primary">Sama-Veda:</span> Means song/singing, contains a collection of Melodies with 1603 verses.</li>
+                            <li><span class="highlight-primary">Yajur-Veda:</span> Means poetry, related to Yajnas (sacrifices), has two forms (Shukla and Krishna), contains 40 chapters and 2000 couplets.</li>
+                            <li><span class="highlight-primary">Atharva-Veda:</span> Different from others, divided into 20 KANAS, contains 730 hymns and 6000 mantras, deals mostly with magic, but also includes Ayurveda, medicine, and pharmacology.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3 id="unit2-upanishads">Upanishads</h3>
+                <ul>
+                    <li>The word <span class="highlight-tertiary">"Upanishad"</span> means <span class="highlight-primary">"sitting down near"</span>.</li>
+                    <li>Also called <span class="highlight-tertiary">Vedanta</span>.</li>
+                    <li>Considered the <span class="highlight-secondary">main source</span> of Indian philosophy.</li>
+                    <li>Total 108 Upanishads, usually divided into various classes.</li>
+                    <li>They teach a philosophy focusing on <span class="highlight-primary">Karma (principles)</span>, not a religion.</li>
+                </ul>
+
+                <h3 id="unit2-ramayana-mahabharata">Ramayana and Mahabharata</h3>
+                <ul>
+                    <li><span class="highlight-tertiary">Ramayana:</span> The main story involves Rama's exile, Sita's abduction by Ravana, Rama's rescue of Sita, and his return to become king. Key teachings include respect for elders, family unity, commitment to duty, righteousness, humility, and embracing all people.</li>
+                    <li><span class="highlight-tertiary">Mahabharata:</span> Story of the conflict between the Pandavas (led by Yudhishthira) and the Kauravas (led by Duryodhana). Includes the dice game, exile, and the battle leading to the Pandavas regaining their kingdom. Teachings highlight the impact of bad company, value of loyal friends, fighting for beliefs, the danger of being overly emotional, and the risk of half knowledge.</li>
+                </ul>
+
+                <h3 id="unit2-buddhist-jain">Buddhist and Jain Literature</h3>
+                <ul>
+                    <li><span class="highlight-tertiary">Buddhist literature:</span> Earliest works were written in Pali. Scriptures are known as the <span class="highlight-secondary">Tripitakas</span>: Vinaya Pitaka (rules), Sutta Pitaka (sermons), and Abhidhamma Pitaka (philosophy). Texts like Mahavansh and Deepvansh provide information about Sri Lanka.</li>
+                    <li><span class="highlight-tertiary">Jain literature:</span> Texts were written in Prakrit. Divided into <span class="highlight-primary">Canonical (sacred texts/teachings of Tirthankaras) and Non-Canonical</span>. Important texts include the Angas, Upangas, and Parikramas. Jain literature also includes Sanskrit works, such as Umasvamin's Tattvarthadigama-Sutra, key for both Digambaras and Svetambaras. Learning centres for Jain monks included universities in Vallabhi and Kalinga.</li>
+                </ul>
+
+                <h3 id="unit2-arthashastra">Kautilya's Arthashastra</h3>
+                <ul>
+                    <li>An ancient Sanskrit manual on statecraft, economics, and military strategy written by Kautilya (Chanakya).</li>
+                    <li>Covers politics, administration, and warfare.</li>
+                    <li>It is divided into <span class="highlight-tertiary">15 books and 180 sections</span>.</li>
+                    <li>Key topics include the duties and training of the King and the roles of Ministers.</li>
+                    <li>Discovered in 1904 and translated in 1909. Books 1-5 cover internal matters, 6-13 external, and 14-15 other issues.</li>
+                    <li>Also known as <span class="highlight-tertiary">Nitishastra</span>.</li>
+                </ul>
+
+                <h3 id="unit2-sanskrit-authors">Famous Sanskrit Authors and Their Works</h3>
+                <ul>
+                    <li><span class="highlight-tertiary">Ashvagosa:</span> Considered the first Sanskrit dramatist and a Buddhist monk, wrote Buddhacarita, Mahalankara, and Saundaranandakavya.</li>
+                    <li><span class="highlight-tertiary">Kalidasa:</span> An immortal poet and dramatist, known for works like Kumar Sambhava and Raghu Vamsa.</li>
+                    <li>Other notable authors mentioned include Bhāsa, Magha, Bharavi, and Vatsyayana, known for significant Sanskrit works.</li>
+                </ul>
+
+                <h3 id="unit2-dravidian-literature">Telugu, Kannada, and Malayalam Literature</h3>
+                <ul>
+                    <li><span class="highlight-tertiary">Telugu:</span> A classical Dravidian language. Its literature includes poems, stories, novels, plays, and song lyrics, often using 'Champu' (mix of prose and poetry).</li>
+                    <li><span class="highlight-tertiary">Kannada:</span> A Dravidian language with a written form, its history is divided into three linguistic phases.</li>
+                    <li><span class="highlight-tertiary">Malayalam:</span> A South Dravidian language spoken in Kerala. Its earliest known work is Rama-charitam. Modern literary movements began in the late 19th century.</li>
+                </ul>
+
+                <h3 id="unit2-sangam">Sangam Literature</h3>
+                <ul>
+                    <li>Refers to the literature produced by an association or academy of learned men in the Tamil land called <span class="highlight-tertiary">'Sangam'</span>.</li>
+                    <li>Its main function was <span class="highlight-secondary">promoting literature</span>.</li>
+                    <li>Characterized by <span class="highlight-primary">naturalism and romanticism</span>.</li>
+                </ul>
+
+                <h3 id="unit2-northern-languages">Northern Indian Languages and Literature</h3>
+                <ul>
+                    <li>These languages evolved in both spoken and written forms.</li>
+                    <li>The Old Brahmi script of Ashoka's time underwent significant change.</li>
+                    <li>Most northern Indian languages, except Urdu, originated from Old Brahmi.</li>
+                    <li>Hindi is spoken in various forms like Braj Bhasha, Avadhi, Bhojpuri, and Khadi Boli.</li>
+                </ul>
+
+                <h3 id="unit2-persian-urdu">Persian and Urdu Languages</h3>
+                <ul>
+                    <li><span class="highlight-tertiary">Persian:</span> Was the language of the Mughal courts, used for historical texts and poetry.</li>
+                    <li><span class="highlight-tertiary">Urdu:</span> Developed from Hindi and Persian.</li>
+                    <li>Introduced with the arrival of Turks and Mongols, Urdu became popular in the early 18th century.</li>
+                    <li>Early poets like Khusrau contributed to its development.</li>
+                </ul>
+
+                <h3 id="unit2-hindi-literature">Hindi Literature</h3>
+                <ul>
+                    <li>Evolved from <span class="highlight-tertiary">Apabhramsa</span> in the 7th-8th centuries.</li>
+                    <li>Strongly influenced by the Bhakti movement, leading to devotional and popular poetry.</li>
+                    <li>The use of regional languages by Saints during the Bhakti movement aided its growth and development.</li>
+                    <li>Hindi poets expressed devotional sentiments and influenced Indian society.</li>
+                </ul>
+            </div>
+
+            <div class="note-card">
+                <h2 id="unit3">Unit 3: Indian Religion, Culture, Tradition, and Practices</h2>
+                <p>This unit discusses Indian Religion and various related movements and philosophical systems. Religion has been central to Indian life since ancient times.</p>
+
+                <h3 id="unit3-religion-general">Indian Religion (General)</h3>
+                <ul>
+                    <li>Religion is described as the <span class="highlight-tertiary">science of soul, morality, and ethics</span>.</li>
+                    <li>Indian spirituality is rooted in ancient philosophical and religious traditions.</li>
+                    <li>Philosophy explained reality, while religion guided how to live.</li>
+                    <li>Philosophy was the theoretical aspect; religion was practical.</li>
+                    <li>Philosophy and religion together offered a holistic approach to life.</li>
+                    <li>It took various forms to suit different groups and their needs.</li>
+                </ul>
+
+                <h3 id="unit3-pre-vedic">Pre-Vedic Religion</h3>
+                <ul>
+                    <li>Traces its roots to preceding rural cultures from Neolithic times.</li>
+                    <li>The Harappan civilization dates back to around 3000 B.C., matured around 2600 B.C., and declined around 1700 B.C.</li>
+                    <li>Archaeological evidence suggests the most important aspect was the worship of the <span class="highlight-secondary">Mother Goddess or Nature Goddess</span>. Seals depict a female figure upside down with a plant emerging from her womb.</li>
+                    <li><span class="highlight-primary">Male Deities</span>, like Shiva, were worshipped.</li>
+                    <li>Harappan people possibly worshipped animals depicted on seals.</li>
+                    <li>They likely worshipped natural elements like water, fire, and trees depicted on seals and artifacts.</li>
+                </ul>
+
+                <h3 id="unit3-vedic-religion">Vedic Religion</h3>
+                <ul>
+                    <li>The early Vedic tradition was primarily maintained by <span class="highlight-primary">priests</span>.</li>
+                    <li>Featured a pantheon of <span class="highlight-tertiary">nature deities</span>.</li>
+                    <li>The chief religious practice was <span class="highlight-secondary">sacrifice</span>, involving specialized priests and the slaughter of animals.</li>
+                    <li>Purposes of sacrifices were rites of hospitality for the gods, performed to obtain material rewards on earth and in heaven.</li>
+                    <li><span class="highlight-tertiary">Two Approaches:</span> Pravritti Lakshana (characterized by action) and Nivritthi Lakshana (characterized by renunciation).</li>
+                    <li><span class="highlight-tertiary">Aims:</span> Abhyudaya (prosperity in this life and enjoyment in heaven in the afterlife) and Nihshreyasa (permanent freedom from all bondage and sufferings).</li>
+                    <li><span class="highlight-tertiary">Vedic Texts:</span> Mantras serve the purpose of Abhyudaya; Upanishads teach the ways and means for Nihshreyasa.</li>
+                </ul>
+
+                <h3 id="unit3-buddhism">Buddhism</h3>
+                <ul>
+                    <li>Founded by <span class="highlight-tertiary">Siddhartha Gautama (The Buddha)</span>.</li>
+                    <li>He was born at <span class="highlight-primary">Lumbini</span> in present-day Nepal.</li>
+                    <li>Siddhartha was deeply affected by seeing an old man, a sick man, a dead body, and a meditative sage, which made him question the nature of suffering and the true meaning of life.</li>
+                    <li>At the age of 29, he left his royal life and went to the forests in search of truth and the cause of suffering.</li>
+                    <li>He achieved <span class="highlight-tertiary">enlightenment</span> at <span class="highlight-secondary">Gaya</span>, on the banks of the Uruvela river, under a pipal tree. After enlightenment, he became known as Buddha.</li>
+                    <li>He decided to share his insights with others, teaching a simple code of conduct in the local language, <span class="highlight-primary">Pali</span>.</li>
+                    <li>He organized his followers into a monastic community called the <span class="highlight-tertiary">Sangha</span>, which followed specific rules and codes of conduct.</li>
+                    <li>At the age of 80, Buddha passed away peacefully at <span class="highlight-primary">Kusinagar (present-day Uttar Pradesh)</span>.</li>
+                    <li><span class="highlight-tertiary">Types of Buddhism (based on geographical area):</span> Theravada, Mahayana, Tibetan Buddhism.</li>
+                    <li><span class="highlight-tertiary">Main Characteristics of Buddha Philosophy:</span> Followers don't acknowledge a supreme god or deity; they focus on achieving enlightenment. Buddha presented simple principles of life and practical ethics. Buddha considered the world as full of misery. Man's duty is to seek liberation from this painful world. Buddha's teachings are practical and suggest how to attain inner peace from the material world.</li>
+                </ul>
+
+                <h3 id="unit3-jainism">Jainism</h3>
+                <ul>
+                    <li>A very ancient religion, <span class="highlight-primary">as old as the Vedic religion</span>.</li>
+                    <li>The Jain tradition has a succession of great teachers or <span class="highlight-tertiary">Tirthankaras</span>.</li>
+                    <li>All the Tirthankaras were <span class="highlight-primary">Kshatriyas</span> by birth.</li>
+                    <li>The first Tirthankara is believed to be <span class="highlight-tertiary">Rishabhanath or Rishabhadev</span>.</li>
+                    <li>The 23rd Tirthankara was <span class="highlight-tertiary">Parshvanatha</span>, who was born in Varanasi.</li>
+                    <li>Founder of Jainism is <span class="highlight-secondary">Vardhaman Mahavira (540-468 BC)</span>.</li>
+                    <li>Vardhaman Mahavira, the 24th Tirthankara, was born in 540 B.C. in a village called <span class="highlight-primary">Kundagrama</span>. His father Siddhartha was the head of the Jnatrika Kshatriya clan.</li>
+                    <li>He contributed a new principle of <span class="highlight-tertiary">non-violence</span> to the four principles told by Parshvanatha.</li>
+                    <li>Due to his simple codes of conduct and use of people's language, Mahavira could successfully propagated Jainism.</li>
+                    <li><span class="highlight-tertiary">Basic Principles of Jainism:</span> Rejection of vedas and vedic practices. Self Control for Moksha. Immortality of the soul. Freedom from actions for Moksha. Belief in Equality.</li>
+                    <li><span class="highlight-tertiary">The Vratas in Jainism:</span> Maha-Vrata (Ahimsa, Satya, Asteya, Aparigraha, Brahmacharya). Anu-Vrata (Soft version of the Maha-Vrata). Guna-Vrata (Dig-vrata, Kal vrata, Anarth dandavat). Shiksha-Vrata (Samayika, Proshadhopavasa, Bhagabhoga parinama, Atithi Samvibhag).</li>
+                </ul>
+
+                <h3 id="unit3-six-systems">Six Systems of Ancient Indian Philosophy</h3>
+                <ul>
+                    <li>The rational investigation of questions about existence, knowledge, and ethics is called <span class="highlight-tertiary">philosophy</span>.</li>
+                    <li><span class="highlight-tertiary">Summary of the six philosophical systems:</span>
+                        <ol>
+                            <li><span class="highlight-primary">Samkhya Philosophy:</span> One of the oldest Indian philosophies. Propounded by Sage Kapila. The term 'Samkhya' relates to enumeration and rational analysis. Dualistic realism, two eternal realities: Purusha (spirit) and Prakriti (Nature). Lost significance during the Gupta period.</li>
+                            <li><span class="highlight-primary">Yoga:</span> Attributed to Sage Patanjali. Yoga is a self-disciplining process of concentration and meditation leading to states of consciousness. Eight limbs of Yoga Sutras: Yama, Niyama, Asana, Pranayama, Pratyahara, Dharana, Dhyana, Samadhi.</li>
+                            <li><span class="highlight-primary">Vaisheshika Philosophy:</span> Expanded by Sage 'Kanada'. Everything is a combination of atoms. Believes that all objects of the universe are composed of five elements - earth, water, air, fire and sky. Living beings were rewarded or punished according to the law of Karma.</li>
+                            <li><span class="highlight-primary">Nyaya Philosophy:</span> Propounded by Gautama Rishi. Focuses on logical reasoning and epistemology. Believes that ideas, beliefs, emotions, and visions depend on the mind. Aims to eliminate ignorance and spread knowledge to everyone.</li>
+                            <li><span class="highlight-primary">Purva Mimamsa Philosophy:</span> Attributed by Jaimini. Means critical examination or solving a problem by reflection. Considers the Vedas as eternal and unchanging. Believes the world is without beginning or end and explains Dharma as duty.</li>
+                            <li><span class="highlight-primary">Vedanta:</span> Expounded by Badarayana. Based on Vedanta Sutra and Brahma Sutra. Deals with the nature of reality and the self.</li>
+                        </ol>
+                    </li>
+                </ul>
+
+                <h3 id="unit3-adi-shankaracharya">Adi Shankaracharya</h3>
+                <ul>
+                    <li>Adi Shankaracharya consolidated the doctrine of <span class="highlight-tertiary">Advaita Vedanta</span>.</li>
+                    <li>He wrote commentaries on the Upanishads, Brahma Sutras, and Bhagavad Gita.</li>
+                    <li>His philosophy Advaita Vedanta emphasizes <span class="highlight-secondary">one ultimate reality</span>.</li>
+                    <li>Brahman is truth; the world is an illusion. Brahman is unchanging and the highest truth.</li>
+                    <li>Shankara traveled across the Indian subcontinent, propagating his philosophy through debates.</li>
+                    <li>He established the importance of monastic life as in the Upanishads and Brahma Sutra.</li>
+                </ul>
+
+                <h3 id="unit3-bhakti">Bhakti Movement</h3>
+                <ul>
+                    <li>The Bhakti movement was a <span class="highlight-secondary">nationwide mass movement</span>.</li>
+                    <li>Contributed to reduce the conflicts of Hindu-Muslim religion.</li>
+                    <li>It gave a right direction to Indian culture and society.</li>
+                    <li>Aimed at the establishment of <span class="highlight-tertiary">classless, egalitarian society</span>.</li>
+                    <li>Reason for the Bhakti movement was the predominance of bigotry, polytheism, and rituals in Hinduism.</li>
+                    <li>Coming of Sufi Saints and other Hindu saints into contact, avoiding the defects of bigotry.</li>
+                    <li>Show the right path of devotion.</li>
+                    <li>Created a sense of social, religious and equality in the mind of the people.</li>
+                    <li><span class="highlight-tertiary">Objectives:</span> Removing the many flaws prevalent in Hinduism. Removing the discrimination in Hinduism.</li>
+                    <li><span class="highlight-tertiary">Heads of Devotional movement mentioned:</span> Swami Ramanandacharya, Swami Ramanand, Kabir, Guru Nanakji, Namdev, Tulsidas, etc.</li>
+                    <li><span class="highlight-tertiary">Impact:</span> Emphasized the equality of human beings while removing caste discrimination. Formulated Hindu-Muslim unity. Increased respect for lower class. Karma Kand spread by Brahmins. Hindus & Muslims both started being Namastak in each other's worship & religious ceremonies.</li>
+                </ul>
+
+                <h3 id="unit3-sufi">Sufi Movement</h3>
+                <ul>
+                    <li>Just as the Bhakti movement started among the Hindus, in the same way, <span class="highlight-tertiary">Sufism</span> emerged among the Muslims.</li>
+                    <li>Based on <span class="highlight-secondary">love-devotion</span> among Muslims.</li>
+                    <li>Different opinions on where the word Sufi originated. Sufi -> Safa -> life of purity & sacrifice. Sufi -> Sufa -> wool. Sufi -> Sophia -> Knowledge.</li>
+                    <li>Sufis are those who are concerned with the <span class="highlight-primary">simplicity, purity, equality & generosity</span> of Islam.</li>
+                    <li><span class="highlight-tertiary">Two main streams:</span> Vajudia and Saudia. Vajudia kept distance from radical Islam, they did not promote Islam. Saudia much closer to orthodox Islam, promoted Islam.</li>
+                    <li>Started in 12th Century and popular in 13th Century.</li>
+                    <li>Main theme was <span class="highlight-tertiary">"wahadut-ul-wajud"</span> means Unity of God.</li>
+                    <li>The first Sufi Saint was <span class="highlight-primary">Begum Rabia of Basra</span> in Iraq.</li>
+                    <li><span class="highlight-tertiary">Features:</span> Sufi's derived its inspiration from Islam. Emphasized upon leading a simple life. Sufi Saints seek inner purity. Devotion is more important than Roza (Fast) or Namaz (Prayer). Salvation through love for God. The Sufis were divided into 12 orders. Did not believe in caste system.</li>
+                </ul>
+
+                <h3 id="unit3-famous-personalities">Famous Personalities</h3>
+                <ul>
+                    <li><span class="highlight-tertiary">Raja Rammohan Roy:</span> Spread modern education, science & technology.</li>
+                    <li><span class="highlight-tertiary">R.G. Bhandarkar & M.G. Ranade:</span> Promoted inter-caste marriages & freedom for women.</li>
+                    <li><span class="highlight-tertiary">Swami Dayananda Saraswati:</span> Founded the Arya Samaj. Fought against untouchability and caste rigidity.</li>
+                    <li><span class="highlight-tertiary">Sayyid Ahmad Khan:</span> Encouraged Muslims to adopt modern education. Also spoke about purdah system.</li>
+                </ul>
+
+                <h3 id="unit3-modern-practices">Modern Religious Practices</h3>
+                <ul>
+                    <li>Religion has been a significant part of India's culture throughout its history.</li>
+                    <li><span class="highlight-tertiary">According to the 2011 census, the religious composition in India was:</span> Hinduism (79.8%), Islam (14.2%), Sikhism (1.72%), Christianity (2.3%), Buddhism (0.7%), Jainism (0.37%).</li>
+                    <li>Hinduism is the most widely practiced religion in India, diverse and often seen as an umbrella term for various religions and traditions.</li>
+                    <li>Islam is the second most followed religion in India.</li>
+                    <li>Sikhism originated in India, promotes devotion to a formless God and emphasizes service, humility & equality.</li>
+                    <li>Buddhism focuses on universal ethics rather than caste-based ethics and follows the Buddha's teachings.</li>
+                    <li>Jainism strongly upholds the principles of 'ahimsa' (non-violence) and promotes vegetarianism & animal welfare.</li>
+                    <li>Christianity is the third most followed religion in India, mostly concentrated in the far South and Mumbai.</li>
+                </ul>
+            </div>
+
+            <div class="note-card">
+                <h2 id="unit4">Unit 4: Science, Management & Indian Knowledge System</h2>
+                <p>This unit explores various aspects of science, technology, and economic activities in ancient and traditional India, drawing on the Indian Knowledge System.</p>
+
+                <h3 id="unit4-astronomy">Astronomy in India</h3>
+                <ul>
+                    <li>Indian astronomy has a <span class="highlight-primary">rich history</span> dating back to prehistoric times.</li>
+                    <li>Early traditions emphasized the <span class="highlight-tertiary">movement of planets</span>.</li>
+                    <li>Different calendars existed, like the Rig Veda calendar (360 days, 12 parts, 5-year yuga) and the Yajur Veda calendar (lunar 354 days, solar 365 days, 6 seasons).</li>
+                    <li>Ancient artifacts like calendar sticks from the Andamans and Mohenjo-daro Ring-Stones suggest early methods for tracking celestial events.</li>
+                    <li>Rock art (c. 7000 years ago) depicted astronomical phenomena like a supernova and meteor showers.</li>
+                    <li><span class="highlight-tertiary">Aryabhata</span> contributed to astronomy, handling basic problems and providing a scientific outlook that influenced later astronomers. His text "Aryabhattiya" included astronomical definitions, planet position methods, sun and moon movement descriptions, and eclipse calculations.</li>
+                </ul>
+
+                <h3 id="unit4-chemistry">Chemistry in Ancient India</h3>
+                <ul>
+                    <li>Early chemistry originated in the <span class="highlight-primary">Indus Valley Civilization</span>.</li>
+                    <li>Chemical arts and crafts included glass making, pottery, jewellery making, dyeing, and tanning.</li>
+                    <li>Major chemical products and contributions included glass, paper, soap (using plant materials), dyes, perfumes, ink, and alcoholic liquors (mentioned in Vedas).</li>
+                </ul>
+
+                <h3 id="unit4-mathematics">Mathematics in Ancient India</h3>
+                <ul>
+                    <li>Evidence of mathematical knowledge is seen in Harappan town planning, which showed understanding of measurement and geometry.</li>
+                    <li>Mathematics originated from <span class="highlight-tertiary">Sulva Sutras</span>.</li>
+                    <li>Practical geometry was introduced in the 2nd Century BCE by <span class="highlight-primary">Apastamba</span>.</li>
+                    <li><span class="highlight-secondary">Key contributions include</span> the Notation System, Decimal System, and the use of Zero.</li>
+                    <li>Aryabhata discovered algebra and formulated the area of a triangle, also contributing to trigonometry. Notable works include Surya Siddhanta and Brihatsamhita.</li>
+                </ul>
+
+                <h3 id="unit4-physics">Physics in Ancient India</h3>
+                <ul>
+                    <li>From Vedic times, the material world was classified into <span class="highlight-tertiary">five elements</span>: Earth, Fire, Air, Water, and Ether.</li>
+                    <li>Ancient Indian philosophers developed the concept of <span class="highlight-secondary">Parmanu</span>, the smallest indivisible particle, suggesting an abstract understanding of atomic division.</li>
+                    <li>The Vaisheshika philosophical system specifically introduced the concept of Parmanu.</li>
+                    <li>Nine types of substances were believed to exist (five elements, Time, Direction/Space, Mind, Spirit).</li>
+                    <li>These substances had 24 qualities, such as fluidity, viscosity, gravity, and elasticity. Discussions also included characteristics of Sound, Heat, and Light.</li>
+                </ul>
+
+                <h3 id="unit4-agriculture">Agriculture in Ancient India</h3>
+                <ul>
+                    <li>Agriculture dates back to the <span class="highlight-primary">Indus Valley Civilization</span> and earlier.</li>
+                    <li>India possesses a large expanse of agricultural land, supported by the monsoon and rivers.</li>
+                    <li>Farming was fundamental to the economy and civilization.</li>
+                    <li><span class="highlight-tertiary">Key crops included</span> wheat, rice, millets, oilseeds, cotton, sugarcane, and indigo. Crops like tobacco and potato were introduced later.</li>
+                    <li>Systems for land measurement and irrigation were developed.</li>
+                </ul>
+
+                <h3 id="unit4-medicine">Medicine in Ancient India</h3>
+                <ul>
+                    <li>Diseases, cures, and medicines were first mentioned in the <span class="highlight-primary">Atharva Veda</span>.</li>
+                    <li><span class="highlight-tertiary">Ayurveda</span>, the oldest medical system, is the science of health and longevity, focusing on removing the root cause of diseases using herbal medicine.</li>
+                    <li>Centres for medicine and learning existed at <span class="highlight-primary">Takshila and Varanasi</span>.</li>
+                    <li>Texts like Charak Samhita, Sushrut Samhita, and Sarangdhara Samhita documented the use of plants, herbs, and substances like opium for medicine.</li>
+                </ul>
+
+                <h3 id="unit4-metallurgy">Metallurgy in Ancient India</h3>
+                <ul>
+                    <li>Metallurgy involves the extraction, purification, and application of metals.</li>
+                    <li>India has a tradition of metallurgical skills stretching over 7000 years.</li>
+                    <li>Pottery, bronze, and copper artifacts from the Indus Valley Civilization indicate early metalworking.</li>
+                    <li>Mass production of various metals and alloys like iron, copper, silver, gold, brass, and bronze occurred by the 1st Century AD.</li>
+                    <li>Iron production in the Ganga valley dates back to 1800 BC. Zinc and steel were also used.</li>
+                </ul>
+
+                <h3 id="unit4-geography">Geography</h3>
+                <ul>
+                    <li>The study of geography stemmed from the interaction between humans and nature.</li>
+                    <li>People had knowledge of their physical surroundings, location, and distances to other places.</li>
+                    <li>Indians were involved in ship building.</li>
+                    <li><span class="highlight-primary">Lothal</span> is evidence of sea trade. Puranas contain information about pilgrimage sites.</li>
+                </ul>
+
+                <h3 id="unit4-biology">Biology</h3>
+                <ul>
+                    <li>Ayurvedic medicines are plant-based, and Ayurvedic texts include plant classification.</li>
+                    <li>Vedic literature mentions plant diseases and treatments.</li>
+                    <li>A Buddhist text, Vinayapitaka, describes plant blights.</li>
+                    <li>The technical term for seed germination is <span class="highlight-tertiary">Ankurwadbhija</span>. Conditions like proper season, soil, and water supply were recognized as important for germination.</li>
+                </ul>
+
+                <h3 id="unit4-harappan-technology">Harappan Technology</h3>
+                <ul>
+                    <li>Technology modified the environment through stone tools, clothing, and construction.</li>
+                    <li>Agriculture was central to the Harappan Civilization.</li>
+                    <li>Ceramic technology included making pots and fire-fired bricks. Pots were used for various purposes and decorated.</li>
+                    <li>Bricks were precisely made and widely used.</li>
+                    <li>Bead-making involved sophisticated techniques for working with stones like carnelian, agate, and jasper.</li>
+                    <li>Other crafts included carving in stone and ivory, carpet making, inlaid woodwork, and making bangles from gold and bronze. Weaving of cotton and silk was also practiced.</li>
+                </ul>
+
+                <h3 id="unit4-water-management">Water Management in Ancient India</h3>
+                <ul>
+                    <li>Ancient India developed various water harvesting, conservation, and distribution structures.</li>
+                    <li>Harappans built wells using <span class="highlight-primary">trapezoid bricks</span> for stability.</li>
+                    <li>Wells were constructed in different shapes and materials.</li>
+                    <li>Village ponds were important for groundwater recharge and connectivity.</li>
+                    <li>Village committees managed water distribution for equity.</li>
+                </ul>
+
+                <h3 id="unit4-textile-technology">Textile Technology in India</h3>
+                <ul>
+                    <li>Vedas and Buddhist literature mention garments, fabrics, weaving, and looms.</li>
+                    <li>Ajanta paintings from 2000 years ago depict clothing and dyeing techniques.</li>
+                    <li>India was a major exporter of textiles, especially cotton and silk, to the Roman Empire, China, and Indonesia.</li>
+                    <li>Textile specialties included <span class="highlight-tertiary">Muslin, Calico, and Chintz</span>. Other fabrics like hemp, flax, linen, and jute were also used.</li>
+                    <li>Weaving involved complex looms, and dyeing used mineral and plant-based sources. Dyes were derived from indigo, madder, turmeric, mango bark, and iron acetate.</li>
+                </ul>
+
+                <h3 id="unit4-writing-technology">Writing Technology in India</h3>
+                <ul>
+                    <li>Writing materials included <span class="highlight-primary">birch bark and palm leaves</span>, used primarily in North India. Ink was made from charcoal and gum or soot.</li>
+                    <li>Skills were developed to preserve manuscripts from insects and fungi.</li>
+                    <li>Paper was introduced from China via Nepal in the 11th Century CE.</li>
+                    <li>Kashmir produced high-quality paper from the late 15th Century, using rags, hemp, lime, and soda. European visitors attested to the quality of Indian paper.</li>
+                </ul>
+
+                <h3 id="unit4-pyrotechnics">Pyrotechnics in India</h3>
+                <ul>
+                    <li>Pyrotechnics involves exothermic chemical reactions for producing heat, light, gas, smoke, and sound.</li>
+                    <li>Fireworks appeared in India in the <span class="highlight-primary">13th or 14th century</span>.</li>
+                    <li>Gunpowder became important in warfare by the 16th century. Sanskrit texts describe its preparation using sulfur, charcoal, and saltpeter.</li>
+                    <li>Rockets were used in Indian warfare from the 16th century and their study by the British contributed to European rocket technology.</li>
+                </ul>
+
+                <h3 id="unit4-trade">Trade in Ancient India</h3>
+                <ul>
+                    <li>Trade networks were significant before and during the Indus Civilization.</li>
+                    <li><span class="highlight-tertiary">Major trade centers</span> emerged in cities like Taxila, Varanasi, and Madurai in the 1st millennium BCE.</li>
+                    <li>These centers were strategically located on trade routes and supported by well-structured states providing infrastructure.</li>
+                    <li>Kautilya's Arthashastra recognized trade as a key economic activity.</li>
+                    <li>Harappans exported various goods including timber, beads, bangles, ivory, and pearls to places like Oman and Mesopotamia.</li>
+                </ul>
+
+                <h3 id="unit4-dominance">India's Dominance up to Pre-colonial Times</h3>
+                <ul>
+                    <li>India consistently had a <span class="highlight-secondary">favorable trade balance</span> and accumulated significant gold.</li>
+                    <li>Trade dominance continued during the Mughal period.</li>
+                    <li>Economic historians note India's high trade surplus with Europe, West Asia, and Africa before British rule.</li>
+                    <li>This dominance was attributed to efficient production of low-cost goods like cotton and spices and well-organized trading communities.</li>
+                    <li>India and China controlled a significant portion of global GDP and remained major economic powers until the colonial era.</li>
+                    <li>Colonial rule led to a decline in India's overseas trade and production.</li>
+                </ul>
+            </div>
+
+            <div class="note-card">
+                <h2 id="unit5">Unit 5: Cultural Heritage & Performing Arts</h2>
+                <p>This unit covers various aspects of India's rich cultural heritage, focusing on architecture, arts, and performance forms.</p>
+
+                <h3 id="unit5-architecture-varieties">Varieties of Indian Architecture</h3>
+                <ul>
+                    <li>Indian architecture is <span class="highlight-secondary">rich and diverse</span>.</li>
+                    <li>It encompasses various styles and forms, such as <span class="highlight-tertiary">caves, stupas, pillars, temples, and Indo-Islamic architecture</span>.</li>
+                </ul>
+
+                <h3 id="unit5-cave-architecture">Major Cave Architecture in India</h3>
+                <ul>
+                    <li>Cave architecture involves creating structures by carving out of solid natural rock. This is known as <span class="highlight-tertiary">rock-cut architecture</span>.</li>
+                    <li>Early caves served as natural shelters and shrines.</li>
+                    <li>There are over 1,500 rock-cut structures in India.</li>
+                    <li><span class="highlight-tertiary">Examples include</span> Ajanta, Ellora, Elephanta, and Sudama Caves.</li>
+                    <li><span class="highlight-primary">Ellora Caves:</span> Known as 'Verul Leni', located in Maharashtra (Aurangabad). They are a rock-cut monastery built by Buddhists and are a UNESCO World Heritage site.</li>
+                    <li><span class="highlight-primary">Ajanta Caves:</span> Located in Aurangabad, Maharashtra. These are 30 rock-cut Buddhist cave monuments built in two phases. They feature sculpture, architecture, and paintings.</li>
+                    <li><span class="highlight-primary">Elephanta Caves:</span> Situated on Elephanta Islands in Mumbai. There are seven cave excavations in the Elephanta group depicting the Trimurti of Shiva.</li>
+                    <li><span class="highlight-primary">Karla Cave:</span> Represents ancient India's early rock-cut Buddhist architecture. Located in Maharashtra, a key feature is Ashokan-type pillars and a great chaitya hall.</li>
+                </ul>
+
+                <h3 id="unit5-stupa-architecture">Stupa Architecture</h3>
+                <ul>
+                    <li>Stupas are <span class="highlight-tertiary">dome-shaped sacred burial mounds</span> made of brick, used to house Buddha's relics.</li>
+                    <li>The term is derived from Sanskrit, meaning heap.</li>
+                    <li>They are built on a stone with a hemispherical dome.</li>
+                    <li><span class="highlight-tertiary">Notable examples include</span> Sanchi, Sarnath, Amaravati, and Bharhut.</li>
+                </ul>
+
+                <h3 id="unit5-pillar-architecture">Pillar Architecture</h3>
+                <ul>
+                    <li>Pillars have been erected since ancient times.</li>
+                    <li>The Mauryan period utilized <span class="highlight-primary">rock-cut pillars</span> to spread Buddha's messages, often topped with animal figures.</li>
+                    <li><span class="highlight-tertiary">Examples include</span> Sarnath, Basarah-Bakhira, and Rampurva.</li>
+                </ul>
+
+                <h3 id="unit5-temple-architecture">Temple Architecture</h3>
+                <ul>
+                    <li>A temple is defined as an enclosed place of worship having a roof or a covered structure.</li>
+                    <li>The word "temple" is derived from the Latin word <span class="highlight-primary">"templum"</span>.</li>
+                    <li>Temples are considered the dwelling place of God and are used for worship by devotees.</li>
+                </ul>
+
+                <h3 id="unit5-indo-islamic-architecture">Indo-Islamic Architecture</h3>
+                <ul>
+                    <li>This style emerged after the Turkish conquest of North India in the 13th century.</li>
+                    <li>It combined local architectural traditions with Islamic styles, resulting in a fusion of techniques and stylized shapes.</li>
+                    <li>This includes structures like Mosques, Jama Masjids, dargahs, tombs, and gardens.</li>
+                </ul>
+
+                <h3 id="unit5-architecture-comparison">Comparison: Indo-Islamic Vs Indian Architecture</h3>
+                <ul>
+                    <li><span class="highlight-tertiary">Decoration:</span> Indo-Islamic architecture depicted plant and floral life, while Indian Architecture depicted Human and Animal forms.</li>
+                    <li><span class="highlight-tertiary">Use of Lime:</span> Indo-Islamic architecture had extensive use of lime as mortar, whereas Indian Architecture had very limited use of lime.</li>
+                    <li><span class="highlight-tertiary">Construction Style:</span> Indo-Islamic architecture utilized the Arcuate style with Arches and beams. Indian Architecture used the Trabate style of construction employing pillars and beams.</li>
+                    <li><span class="highlight-tertiary">Prayer Space:</span> Mosques were light and open, with a large prayer hall for collective prayer. Temples were dark and closed, emphasizing individual prayer in smaller halls.</li>
+                </ul>
+
+                <h3 id="unit5-sculptures-seals">Sculptures & Seals</h3>
+                <ul>
+                    <li><span class="highlight-tertiary">Primary materials</span> for sculpture were stone, metal, and terracotta.</li>
+                    <li>The earliest sculpture is traced to the <span class="highlight-primary">Indus Valley Civilization</span>.</li>
+                    <li>There is a gap in the record until the Buddhist era.</li>
+                    <li><span class="highlight-tertiary">Ashoka's Reign (270 to 232 BCE)</span> marked the start of Indian monumental stone sculpture.</li>
+                    <li>Sculptures depicted religious themes alongside secular subjects like God and goddesses, birds, and trees.</li>
+                    <li>Seals were used by both the state and private entities for verifying transactions. They are comparable to contemporary stamps.</li>
+                    <li>Initial seals were discovered from the <span class="highlight-primary">pre-Harappan phase</span>.</li>
+                    <li>Thousands of Harappan seals have been found at archaeological sites.</li>
+                    <li>They were made of materials like steatite, gold, and ivory, typically 0.5 inches to 2.5 inches in size, and were square or rectangular.</li>
+                    <li>Seals indicate relationships and interactions with the outside world.</li>
+                </ul>
+
+                <h3 id="unit5-coinage-pottery">Coinage & Pottery in Ancient India</h3>
+                <ul>
+                    <li>This is listed as a topic in Unit 5. The sources mention initial seals or "coins" discovered from the pre-Harappan phase. Pottery was noted as a key ceramic technology in the Harappan Civilization.</li>
+                </ul>
+
+                <h3 id="unit5-puppet">Puppet and Puppetry</h3>
+                <ul>
+                    <li>This is listed as a topic in Unit 5.</li>
+                </ul>
+
+                <h3 id="unit5-classical-dance">Classical Dance Forms</h3>
+                <ul>
+                    <li>This is listed as a topic in Unit 5.</li>
+                </ul>
+
+                <h3 id="unit5-fairs-festivals">Fairs & Festivals of India</h3>
+                <ul>
+                    <li>This is listed as a topic in Unit 5.</li>
+                </ul>
+
+                <h3 id="unit5-cinema-evolution">Evolution of Indian Cinema</h3>
+                <ul>
+                    <li>This is listed as a topic in Unit 5.</li>
+                    <li>In the Modern Era (1990-Present), technological advancements like digital effects improved film quality.</li>
+                </ul>
+
+                <h3 id="unit5-cinematography-act">The Cinematography Act & CBFC</h3>
+                <ul>
+                    <li>This is listed as a topic in Unit 5.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
